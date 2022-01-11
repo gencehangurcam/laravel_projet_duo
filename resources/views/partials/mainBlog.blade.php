@@ -20,7 +20,7 @@
                 @foreach ($articles as $item)
                 <div class="col-md-9">
                     <div class="blog-post">
-                        <a href="blog-post.html"><img class="img-carousel post-img" src="assets/img/portfolio-1.jpg" alt=""></a>
+                        <a href="blog-post.html"><img class="img-carousel post-img" src={{ "assets/img/portfolio-1.jpg" }} alt=""></a>
                         <div class="post-content">
                             <h3><a class="post-title" href="blog-post.html">{{ $item->titre }}</a></h3>
                             <p class="section-text">{{ $item->description }}</p>
