@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,26 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-<<<<<<< HEAD
-    return view('welcome');
-});
-=======
-    return view('home');
-})->name("home");
 
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
+//front client
+Route::get('/',[FrontController::class,'home'])->name("home");
 
-Route::get('/portfolio', function () {
-    return view('portfolio');
-})->name('portfolio');
+Route::get('/blog',[FrontController::class,'blog'])->name('blog');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/portfolio',[FrontController::class,'portfolio'])->name('portfolio');
+
+Route::get('/contact',[FrontController::class,'contact'])->name('contact');
 
 
 
->>>>>>> 85b6e2653fb20935b9ce12087b5f498c93a6aa1c
+//back admin
+
+Route::get('/admin/blog',[BlogController::class,'index'])->name('blog.index');
+

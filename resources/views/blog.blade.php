@@ -5,5 +5,4 @@
 @include('partials.mainBlog')
 @include('partials.footer')
 
-
 @endsection
