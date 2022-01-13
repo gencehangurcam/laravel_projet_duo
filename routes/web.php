@@ -22,7 +22,7 @@ Route::get('/',[FrontController::class,'home'])->name("home");
 
 Route::get('/blog',[FrontController::class,'blog'])->name('blog');
 
-Route::get('/portfolio',[FrontController::class,'portfolio'])->name('portfolio');
+Route::get('/portfolio',[PortfolioController::class,'portfolio'])->name('portfolio');
 
 Route::get('/contact',[FrontController::class,'contact'])->name('contact');
 
