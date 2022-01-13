@@ -12,7 +12,7 @@
             <div class="row" id="grid">
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["uiux"]'>
                     <a class="portfolio-link" href="#">
-                        <img src="assets/img/portfolio-1.jpg" alt="" src="{{ asset('assets/img/portfolio-1.jpg') }}" class="img-carousel">
+                        <img src="assets/img/portfolio-1.jpg" alt="" src="{{ asset("img/" . $item->image) }}" class="img-carousel">
                         <div class="portfolio-info">
                             <div class="portfolio-info-top">
                                 <h3>{{ $item->titre }}</h3>
