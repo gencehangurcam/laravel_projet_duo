@@ -18,17 +18,13 @@ class FrontController extends Controller
         return view('blog', compact("articles"));
     }
 
-    public function portfolio(){
-        
-        return view('portfolio');
-    }
 
     public function contact()
     {
         return view('contact');
     }
 
-    public function dashboard()
+    public function admin()
     {
         return view('admin.dashboard');
     }
