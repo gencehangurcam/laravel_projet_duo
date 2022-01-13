@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,4 +31,10 @@ Route::get('/contact',[FrontController::class,'contact'])->name('contact');
 //back admin
 
 Route::get('/admin/blog',[BlogController::class,'index'])->name('blog.index');
+
+Route::get('/admin/blog/main',[BlogController::class,'create'])->name('blog.create');
+
+Route::post('/admin/blog/store',[BlogController::class,'store'])->name('blog.store');
+
+Route::get('/admin/portfolio',[PortfolioController::class,'index'])->name('portfolio.index');
 
