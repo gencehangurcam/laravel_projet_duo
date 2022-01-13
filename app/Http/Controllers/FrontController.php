@@ -19,6 +19,7 @@ class FrontController extends Controller
     }
 
     public function portfolio(){
+        
         return view('portfolio');
     }
 

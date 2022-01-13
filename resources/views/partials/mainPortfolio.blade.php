@@ -7,21 +7,24 @@
         </div>
 
         <div class="container-fluid">
+            @foreach ($articles as $item )
+
             <div class="row" id="grid">
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["uiux"]'>
                     <a class="portfolio-link" href="#">
-                        <img src="assets/img/portfolio-1.jpg" alt="" class="img-carousel">
+                        <img src="assets/img/portfolio-1.jpg" alt="" src="{{ asset('assets/img/portfolio-1.jpg') }}" class="img-carousel">
                         <div class="portfolio-info">
                             <div class="portfolio-info-top">
-                                <h3>Business Perfect item</h3>
+                                <h3>{{ $item->titre }}</h3>
                             </div><!-- /.portfolio-info-top -->
                             <div class="portfolio-info-bottom">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra dolor eu nunc porttitor sollicitudin. Maecenas dignissim ultricies pharetra.</p>
+                                <p>{{ $item->description }}</p>
                             </div><!-- /.portfolio-info-bottom -->
                         </div><!-- /.portfolio-info  -->
                     </a>
                 </div><!-- /.col-lg-fifth  -->
-                <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["branding"]'>
+                @endforeach
+                {{-- <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["branding"]'>
                     <a class="portfolio-link" href="#">
                         <img src="assets/img/portfolio-2.jpg" alt="" class="img-carousel">
                         <div class="portfolio-info">
@@ -236,6 +239,6 @@
 
         </div>
 
-    </section><!-- /.social-networks -->
+    </section><!-- /.social-networks --> --}}
 
 </main><!-- /.site-main -->
