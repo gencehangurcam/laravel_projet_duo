@@ -7,5 +7,6 @@
         <a class="btn btn-primary" href="{{ route('portfolio.create') }}">create</a>
 
     </div>
+    @include('partials.tablePortfolio')
 
 @endsection

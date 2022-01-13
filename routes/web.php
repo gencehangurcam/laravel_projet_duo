@@ -22,6 +22,8 @@ Route::get('/',[FrontController::class,'home'])->name("home");
 
 Route::get('/blog',[FrontController::class,'blog'])->name('blog');
 
+Route::get('/portfolio',[FrontController::class,'portfolio'])->name('portfolio');
+
 Route::get('/admin/dashboard',[FrontController::class,'admin'])->name('admin');
 
 Route::get('/contact',[FrontController::class,'contact'])->name('contact');
@@ -43,7 +45,7 @@ Route::get('/admin/portfolio/create',[PortfolioController::class,'create'])->nam
 Route::post('/admin/portfolio/store',[PortfolioController::class,'store'])->name('portfolio.store');
 
 
-Route::get('/portfolio',[PortfolioController::class,'portfolio'])->name('portfolio');
+// Route::get('/portfolio',[PortfolioController::class,'portfolio'])->name('portfolio');
 
 Route::delete('/admin/portfolio/{id}/destroy',[PortfolioController::class,'destroy'])->name("portfolio.destroy");
 

@@ -9,15 +9,13 @@ class PortfolioController extends Controller
 {
     public function index(){
 
-        return view('admin.portfolio.main');
 
-    }
-
-    public function portfolio()
-    {
         $articles = Article::all();
-        return view('portfolio', compact("articles"));
+            return view('admin.portfolio.main', compact("articles"));
+
     }
+
+    
 
     public function create(){
 
@@ -27,7 +25,7 @@ class PortfolioController extends Controller
     public function store(Request $request){
 
         $articles = new Article();
-        $articles->tritre =$request->titre;
+        $articles->titre =$request->titre;
         $articles->image =$request->image;
         $articles->description =$request->description;
         $articles ->save();
