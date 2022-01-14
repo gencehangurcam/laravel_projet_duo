@@ -8,24 +8,42 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-   public function index()
-        {
-            // return view('admin');
-        }
+    public function index(){
 
-   public function create()
-        {
-            return view('admin.blog.main');
-        }
 
-    public function store()
-        {
+        $articles = Article::all();
+            return view('admin.blog.main', compact("articles"));
+
+    }
 
 
 
+    public function create(){
+
+        return view('admin.blog.create');
+
+    }
+    public function store(Request $request){
+
+        $articles = new Article();
+        $articles->titre =$request->titre;
+        $articles->image =$request->image;
+        $articles->description =$request->description;
+        $articles ->save();
+
+        return redirect()->route('blog.index');
 
 
 
-        }
+    }
 
+    public function destroy(Article $id){
+        $id->delete();
+
+        return redirect()->route('blog.index');
+
+
+
+
+    }
 }

@@ -32,11 +32,6 @@ Route::get('/contact',[FrontController::class,'contact'])->name('contact');
 
 //back admin
 
-Route::get('/admin/blog',[BlogController::class,'index'])->name('blog.index');
-
-Route::get('/admin/blog/main',[BlogController::class,'create'])->name('blog.create');
-
-Route::post('/admin/blog/store',[BlogController::class,'store'])->name('blog.store');
 
 Route::get('/admin/portfolio',[PortfolioController::class,'index'])->name('portfolio.index');
 
@@ -48,4 +43,15 @@ Route::post('/admin/portfolio/store',[PortfolioController::class,'store'])->name
 // Route::get('/portfolio',[PortfolioController::class,'portfolio'])->name('portfolio');
 
 Route::delete('/admin/portfolio/{id}/destroy',[PortfolioController::class,'destroy'])->name("portfolio.destroy");
+
+
+
+Route::get('/admin/blog',[BlogController::class,'index'])->name('blog.index');
+
+Route::get('/admin/blog/create',[BlogController::class,'create'])->name('blog.create');
+
+Route::post('/admin/blog/store',[BlogController::class,'store'])->name('blog.store');
+
+
+Route::delete('/admin/blog/{id}/destroy',[BlogController::class,'destroy'])->name("blog.destroy");
 
