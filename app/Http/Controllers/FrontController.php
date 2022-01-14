@@ -18,9 +18,13 @@ class FrontController extends Controller
         return view('blog', compact("articles"));
     }
     public function portfolio(){
+<<<<<<< HEAD
         $articles = Article::all();
 
         return view('portfolio',compact("articles"));
+=======
+        return view('portfolio');
+>>>>>>> 229092007cda7cc75e526469aeba2ded1070b21e
     }
 
 
