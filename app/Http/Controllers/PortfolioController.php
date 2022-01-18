@@ -53,6 +53,18 @@ class PortfolioController extends Controller
         return view('admin.portfolio.edit',compact('id'));
 
     }
+    public function update(request $request,Article
+     $id){
+
+        $id->titre = $request->titre;
+        $id->image = $request->image;
+        $id->description = $request->description;
+        $id->save();
+
+        return redirect()->route("portfolio.index");
+
+
+    }
 
 
 
