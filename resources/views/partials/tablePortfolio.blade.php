@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-        @forelse ( $articles as $item )
+        @forelse ( $articles->shuffle() as $item )
 
         <tr>
           <th scope="row">{{ $item->id }}</th>

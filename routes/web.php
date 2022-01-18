@@ -44,13 +44,11 @@ Route::get('/admin/portfolio/create',[PortfolioController::class,'create'])->nam
 
 Route::post('/admin/portfolio/store',[PortfolioController::class,'store'])->name('portfolio.store');
 
-
-// Route::get('/portfolio',[PortfolioController::class,'portfolio'])->name('portfolio');
-
+// crud delete
 Route::delete('/admin/portfolio/{id}/destroy',[PortfolioController::class,'destroy'])->name("portfolio.destroy");
-
+// crud show
 Route::get('/admin/portfolio/{id}/show',[PortfolioController::class,'show'])->name("portfolio.show");
-
+// crud edit
 Route::get('/admin/portfolio/{id}/edit',[PortfolioController::class,'edit'])->name("portfolio.edit");
 
 Route::put('/admin/portfolio/{id}/update',[PortfolioController::class,'update'])->name("portfolio.update");
