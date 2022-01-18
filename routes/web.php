@@ -52,3 +52,5 @@ Route::get('/admin/portfolio/{id}/show',[PortfolioController::class,'show'])->na
 Route::get('/admin/portfolio/{id}/edit',[PortfolioController::class,'edit'])->name("portfolio.edit");
 
 Route::put('/admin/portfolio/{id}/update',[PortfolioController::class,'update'])->name("portfolio.update");
+
+
