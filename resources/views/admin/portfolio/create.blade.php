@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('layouts.back')
     @section('content')
 
     <h1 class="py-5 text-center">page admin portfolio create</h1>

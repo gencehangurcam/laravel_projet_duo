@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('layouts.back')
 
 @section('content')
 <div class="content w-75 p-3">

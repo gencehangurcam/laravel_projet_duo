@@ -28,6 +28,19 @@ Route::get('/admin/dashboard',[FrontController::class,'admin'])->name('admin');
 
 Route::get('/contact',[FrontController::class,'contact'])->name('contact');
 
+//BLOG ADMIN
+Route::get('/admin/blog',[BlogController::class,'index'])->name('blog.index');
+
+Route::get('/admin/blog/create',[BlogController::class,'create'])->name('blog.create');
+Route::post('/admin/blog/store',[BlogController::class,'store'])->name('blog.store');
+
+Route::delete('/admin/blog/{id}/destroy',[BlogController::class,'destroy'])->name("blog.destroy");
+
+Route::get('/admin//blog/{id}/show', [BlogController::class, 'show'])->name('blog.show');
+
+//upadte edit
+Route::get("/admin/blog/{id}/edit",[BlogController::class,"edit"])->name("blog.edit");
+Route::put("/admin/blog/{id}/update",[BlogController::class,"update"])->name("blog.update");
 
 
 //back admin
