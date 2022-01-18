@@ -45,13 +45,16 @@ Route::post('/admin/portfolio/store',[PortfolioController::class,'store'])->name
 Route::delete('/admin/portfolio/{id}/destroy',[PortfolioController::class,'destroy'])->name("portfolio.destroy");
 
 
-
+//BLOG ADMIN
 Route::get('/admin/blog',[BlogController::class,'index'])->name('blog.index');
 
 Route::get('/admin/blog/create',[BlogController::class,'create'])->name('blog.create');
-
 Route::post('/admin/blog/store',[BlogController::class,'store'])->name('blog.store');
-
 
 Route::delete('/admin/blog/{id}/destroy',[BlogController::class,'destroy'])->name("blog.destroy");
 
+Route::get('/admin//blog/{id}/show', [BlogController::class, 'show'])->name('blog.show');
+
+//upadte edit
+Route::get("/admin/blog/{id}/edit",[BlogController::class,"edit"])->name("blog.edit");
+Route::put("/admin/blog/{id}/update",[BlogController::class,"update"])->name("blog.update");
