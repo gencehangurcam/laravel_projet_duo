@@ -1,4 +1,4 @@
-@extends("layout.back")
+@extends("layouts.back")
 
 @section('content')
     <h1>page show</h1>

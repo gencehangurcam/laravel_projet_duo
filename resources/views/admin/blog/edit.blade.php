@@ -1,4 +1,4 @@
-@extends("layout.back")
+@extends("layouts.back")
 
 @section("content")
 <h1>form d add de new classee</h1>
