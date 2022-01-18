@@ -24,6 +24,8 @@
                   <button class="btn btn-danger">Delete</button>
 
               </form>
+              <a href="{{ route("portfolio.show",$item->id) }}">show</a>
+              <a href="{{ route("portfolio.edit",$item->id) }}">Edit</a>
           </td>
 
         </tr>

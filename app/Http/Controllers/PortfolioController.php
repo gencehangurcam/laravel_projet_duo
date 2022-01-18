@@ -15,7 +15,7 @@ class PortfolioController extends Controller
 
     }
 
-    
+
 
     public function create(){
 
@@ -41,8 +41,21 @@ class PortfolioController extends Controller
 
         return redirect()->route('portfolio.index');
 
+    }
+    public function show(Article $id){
 
-
+        return view("admin.portfolio.show",compact('id'));
 
     }
+
+    public function edit(Article $id){
+
+        return view('admin.portfolio.edit',compact('id'));
+
+    }
+
+
+
+
+
 }
